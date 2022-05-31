@@ -1,8 +1,8 @@
 export default {
   addPizzaToCart(id, quantity, selectedPizzaSize, cartItems, pizzaProducts) {
-    const pizzaToAdd = pizzaProducts.find((pizza) => pizza.id === id);
+    const pizzaToAdd = pizzaProducts.find((pizza) => pizza._id === id);
 
-    const addedPizza = cartItems.find((pizza) => pizza.id === id && pizza.selectedPizzaSize === selectedPizzaSize);
+    const addedPizza = cartItems.find((pizza) => pizza._id === id && pizza.selectedPizzaSize === selectedPizzaSize);
     let pizzaCartItems;
     if(addedPizza){
         addedPizza.quantity=addedPizza.quantity+quantity;
@@ -23,7 +23,7 @@ export default {
     return pizzaCartItems;
   },
   removePizzaFromCart(id, selectedPizzaSize, cartItems){
-    const leftOverItems = cartItems.filter((pizza) => !(pizza.id === id && pizza.selectedPizzaSize === selectedPizzaSize));
+    const leftOverItems = cartItems.filter((pizza) => !(pizza._id === id && pizza.selectedPizzaSize === selectedPizzaSize));
     return leftOverItems;
   },
 };

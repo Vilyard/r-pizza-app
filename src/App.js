@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Pizza from "./components/Pizza/Pizza";
 import Cart from "./components/Cart/Cart";
+import AdminPage from "./pages/Admin/Index";
+import OrdersPage from "./pages/Orders";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="pizza/:pizzaName" element={<Pizza />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="admin" element={<AdminPage />} />
+        <Route path="orders" element={<OrdersPage />} />
         <Route path="*" element={<Navigate to="/pizza" replace />} />
       </Routes>
       <Footer />

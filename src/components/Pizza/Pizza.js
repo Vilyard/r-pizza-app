@@ -33,7 +33,7 @@ function Pizza() {
           {currentPizza.priceSmall} ден - {currentPizza.priceBig} ден
         </h1>
         <p>Големина: </p>
-        <button
+        <button className="btn-small"
           onClick={() => {
             setCurrentPrice(currentPizza.priceSmall);
             setPizzaSize("мала");
@@ -41,7 +41,7 @@ function Pizza() {
         >
           МАЛА
         </button>
-        <button
+        <button className="btn-big"
           onClick={() => {
             setCurrentPrice(currentPizza.priceBig);
             setPizzaSize("голема");

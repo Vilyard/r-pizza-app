@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div id="pizzaMenu">
       {pizzaProducts.map(pizza => (
-        <div key={pizza.id} className="product">
+        <div key={pizza._id} className="product">
           <div className='priceTag'>
             {pizza.priceSmall} ден - {pizza.priceBig} ден
           </div>
