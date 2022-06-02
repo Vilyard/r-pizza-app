@@ -1,1 +1,0 @@
-mongodb+srv://sourcemx:sourcemx@sourcemx.fx5fp.mongodb.net/?retryWrites=true&w=majority
